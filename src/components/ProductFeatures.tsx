@@ -79,6 +79,10 @@ export const ProductFeatures = () => {
                     <div className="text-4xl animate-float delay-200">📱</div>
                     <h4 className="font-semibold text-foreground">MOBILE, TABLET</h4>
                     <p className="text-sm text-muted-foreground">IPAD ANCHE!</p>
+                    <div className="flex justify-center gap-2 mt-2">
+                      <span className="text-2xl">📲</span>
+                      <span className="text-sm text-muted-foreground">Tablet</span>
+                    </div>
                   </div>
                 </Card>
                 
@@ -86,7 +90,7 @@ export const ProductFeatures = () => {
                   <div className="space-y-4">
                     <div className="text-4xl animate-float delay-400">📊</div>
                     <h4 className="font-semibold text-foreground">GOOGLE SPREADSHEET</h4>
-                    <p className="text-sm text-muted-foreground">Modificare, Stampare, Salvare</p>
+                    <p className="text-sm text-muted-foreground">Per Modificare, Stampare, Salvare</p>
                   </div>
                 </Card>
               </div>
@@ -159,14 +163,14 @@ export const ProductFeatures = () => {
 
             {/* Demo Cards */}
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
-              {[
-                { icon: '🎯', title: 'Sistema Vita da Dio', desc: 'Demo: Sistema Vita da Dio' },
-                { icon: '📅', title: 'Calendario 12 Mesi', desc: 'Visione strategica a lungo termine per i tuoi progetti.' },
-                { icon: '✅', title: 'Lista Strategica', desc: 'Organizza le tue azioni quotidiane come mosse vincenti.' },
-                { icon: '♔', title: 'Sezioni C1-C12', desc: '12 aree di focus per una crescita completa e bilanciata.' },
-                { icon: '⚡', title: 'Moduli H1-H12', desc: 'Strategie avanzate per massimizzare la tua produttività.' },
-                { icon: '📥', title: 'File Excel Pronto', desc: 'Scarica e inizia subito, compatibile con Excel e Google Sheets.' }
-              ].map((item, index) => (
+                  {[
+                    { icon: '🎯', title: 'Sistema Vita da Dio', desc: 'Demo: Sistema Vita da Dio' },
+                    { icon: '📅', title: 'Calendario 12 Mesi', desc: 'Demo: Calendario 2025' },
+                    { icon: '✅', title: 'Lista Strategica', desc: 'Demo: Liste Strategiche' },
+                    { icon: '♔', title: 'Sezioni C1-C12', desc: 'Demo: 12 Sezioni Focus' },
+                    { icon: '⚡', title: 'Moduli H1-H12', desc: 'Demo: Moduli Avanzati' },
+                    { icon: '📥', title: 'File Excel Pronto', desc: 'Demo: Download Immediato' }
+                  ].map((item, index) => (
                 <Card key={index} className="bg-gradient-card border-border shadow-soft p-6 hover-lift animate-scale-in" style={{ animationDelay: `${index * 0.1}s` }}>
                   <div className="text-center space-y-4">
                     <div className="text-4xl animate-float" style={{ animationDelay: `${index * 0.2}s` }}>{item.icon}</div>

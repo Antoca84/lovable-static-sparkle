@@ -257,10 +257,10 @@ export const HowItWorks = () => {
               
               <div>
                 <h4 className="text-xl font-semibold text-foreground mb-6">Seleziona le Tue Priorità e Crea Habit Tracker!</h4>
-                <div className="bg-card-accent border-border rounded-lg p-6">
-                  <div className="text-center mb-4">
-                    <div className="text-lg font-semibold text-primary">2025년 1월</div>
-                  </div>
+              <div className="bg-card-accent border-border rounded-lg p-6">
+                <div className="text-center mb-4">
+                  <div className="text-lg font-semibold text-primary">2025년 1월</div>
+                </div>
                   <div className="space-y-3">
                     <div className="flex items-center gap-3 p-2 bg-gradient-card border-border rounded">
                       <span className="text-xl">🏃‍♂️</span>
