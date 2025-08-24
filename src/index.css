@@ -202,6 +202,23 @@
   transform: translateY(0);
 }
 
+/* Background Gradient Utility Classes */
+.bg-gradient-hero {
+  background: var(--gradient-hero);
+}
+
+.bg-gradient-card {
+  background: var(--gradient-card);
+}
+
+.bg-gradient-glow {
+  background: var(--gradient-glow);
+}
+
+.bg-gradient-accent {
+  background: var(--gradient-accent);
+}
+
 @layer base {
   * {
     @apply border-border;
