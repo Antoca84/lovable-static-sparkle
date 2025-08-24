@@ -57,6 +57,10 @@ export const HowItWorks = () => {
             <div className="bg-card-accent border-border rounded-lg p-6">
               <h4 className="text-xl font-semibold text-foreground mb-4">Tracking Settimanale dei Tuoi Obiettivi</h4>
               
+              <div className="text-center mb-4">
+                <div className="text-lg font-semibold text-primary">2025년 7월</div>
+              </div>
+              
               <div className="grid grid-cols-7 gap-2 text-center mb-4">
                 <div className="font-semibold text-primary">SUN</div>
                 <div className="font-semibold text-primary">MON</div>
@@ -67,7 +71,7 @@ export const HowItWorks = () => {
                 <div className="font-semibold text-primary">SAT</div>
               </div>
               
-              <div className="grid grid-cols-7 gap-2 text-center">
+              <div className="grid grid-cols-7 gap-2 text-center mb-4">
                 {[1, 2, 3, 4, 5, 6, 7].map((day, index) => (
                   <div key={index} className="bg-gradient-card border-border rounded p-2 animate-count-up" style={{ animationDelay: `${index * 0.1}s` }}>
                     <div className="text-foreground font-semibold">{day}</div>
@@ -77,7 +81,7 @@ export const HowItWorks = () => {
               
               <div className="flex justify-between items-center mt-4">
                 <div className="text-success font-bold text-xl">82%</div>
-                <div className="text-muted-foreground">WEEK GOAL</div>
+                <div className="text-muted-foreground text-center">WEEK GOAL</div>
                 <div className="text-success font-bold text-xl">85%</div>
               </div>
             </div>
@@ -238,18 +242,18 @@ export const HowItWorks = () => {
             <div className="grid md:grid-cols-2 gap-8">
               <div>
                 <h4 className="text-xl font-semibold text-foreground mb-6">Vuoi Definire le Categorie dei Tuoi Obiettivi</h4>
-                <div className="space-y-4">
+                <div className="grid grid-cols-2 gap-3">
                   {[
-                    { icon: '🏋️', text: 'Obiettivi Fisici' },
-                    { icon: '💼', text: 'Crescita Professionale' },
-                    { icon: '❤️', text: 'Relazioni' },
-                    { icon: '🧠', text: 'Apprendimento' },
-                    { icon: '💰', text: 'Finanze' },
-                    { icon: '🎨', text: 'Creatività' }
+                    { icon: '🏋️', text: 'Obiettivi Fisici', color: 'bg-yellow-500' },
+                    { icon: '🧠', text: 'Apprendimento', color: 'bg-purple-500' },
+                    { icon: '💼', text: 'Crescita Professionale', color: 'bg-blue-500' },
+                    { icon: '💰', text: 'Finanze', color: 'bg-orange-500' },
+                    { icon: '❤️', text: 'Relazioni', color: 'bg-green-500' },
+                    { icon: '🎨', text: 'Creatività', color: 'bg-pink-500' }
                   ].map((item, index) => (
-                    <div key={index} className="flex items-center gap-3 p-3 bg-card-accent border-border rounded-lg animate-fade-in-left" style={{ animationDelay: `${index * 0.1}s` }}>
-                      <span className="text-2xl">{item.icon}</span>
-                      <span className="text-foreground">{item.text}</span>
+                    <div key={index} className={`flex items-center gap-2 p-3 ${item.color} text-white rounded-lg animate-fade-in-left`} style={{ animationDelay: `${index * 0.1}s` }}>
+                      <span className="text-lg">{item.icon}</span>
+                      <span className="text-sm font-medium">{item.text}</span>
                     </div>
                   ))}
                 </div>
@@ -257,18 +261,28 @@ export const HowItWorks = () => {
               
               <div>
                 <h4 className="text-xl font-semibold text-foreground mb-6">Seleziona le Tue Priorità e Crea Habit Tracker!</h4>
-              <div className="bg-card-accent border-border rounded-lg p-6">
-                <div className="text-center mb-4">
-                  <div className="text-lg font-semibold text-primary">2025년 1월</div>
-                </div>
+                <div className="bg-card-accent border-border rounded-lg p-6">
+                  <div className="text-center mb-4">
+                    <div className="text-lg font-semibold text-primary">2025년 1월</div>
+                  </div>
                   <div className="space-y-3">
-                    <div className="flex items-center gap-3 p-2 bg-gradient-card border-border rounded">
+                    <div className="flex items-center gap-3 p-3 bg-gradient-card border-border rounded">
                       <span className="text-xl">🏃‍♂️</span>
                       <span className="text-foreground">Corri 3 volte a settimana</span>
+                      <div className="ml-auto flex gap-1">
+                        {[1, 2, 3, 4, 5].map((dot, i) => (
+                          <div key={i} className={`w-3 h-3 rounded-full ${i < 3 ? 'bg-yellow-500' : 'bg-gray-300'}`}></div>
+                        ))}
+                      </div>
                     </div>
-                    <div className="flex items-center gap-3 p-2 bg-gradient-card border-border rounded">
+                    <div className="flex items-center gap-3 p-3 bg-gradient-card border-border rounded">
                       <span className="text-xl">📚</span>
                       <span className="text-foreground">Leggi 30 minuti al giorno</span>
+                      <div className="ml-auto flex gap-1">
+                        {[1, 2, 3, 4, 5].map((dot, i) => (
+                          <div key={i} className={`w-3 h-3 rounded-full ${i < 4 ? 'bg-yellow-500' : 'bg-gray-300'}`}></div>
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </div>
