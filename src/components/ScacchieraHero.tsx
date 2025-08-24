@@ -107,6 +107,7 @@ export const ScacchieraHero = () => {
               <Button 
                 size="lg" 
                 className="w-full bg-gradient-accent text-accent-foreground hover:bg-gradient-accent hover:shadow-glow font-bold py-4 text-lg animate-pulse-glow"
+                onClick={() => window.open('https://buy.stripe.com/28EeVc4cubz14KodFC1ZS00', '_blank')}
               >
                 🏆 Ottieni la Tua Scacchiera del Tempo →
               </Button>

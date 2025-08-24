@@ -31,7 +31,7 @@ export const ProductFeatures = () => {
   const sectionRef = useScrollReveal();
 
   return (
-    <section className="py-20 px-4 relative">
+    <section className="py-16 px-4 relative">
       {/* Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute bottom-0 left-0 w-80 h-80 bg-gradient-glow rounded-full opacity-10 animate-float delay-300"></div>

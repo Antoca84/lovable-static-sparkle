@@ -30,7 +30,7 @@ export const ProblemSection = () => {
   const sectionRef = useScrollReveal();
 
   return (
-    <section className="py-20 px-4 relative">
+    <section className="py-16 px-4 relative">
       {/* Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute top-0 right-0 w-72 h-72 bg-gradient-glow rounded-full opacity-10 animate-float"></div>
