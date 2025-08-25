@@ -49,8 +49,173 @@
     <!-- End Single Page Apps for GitHub Pages -->
   </head>
 
+  
+  <style>
+    /* Reset and Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.6;
+      background: linear-gradient(135deg, hsl(217, 33%, 17%), hsl(217, 33%, 12%));
+      color: hsl(45, 93%, 89%);
+      min-height: 100vh;
+    }
+
+    /* Layout Styles */
+    .container {
+      min-height: 100vh;
+      padding: 2rem;
+    }
+
+    .main-title {
+      font-size: 2.25rem;
+      font-weight: 700;
+      color: hsl(45, 93%, 58%);
+      margin-bottom: 1rem;
+    }
+
+    .subtitle {
+      font-size: 1.25rem;
+      color: hsl(45, 30%, 75%);
+      margin-bottom: 2rem;
+    }
+
+    .card {
+      background: linear-gradient(145deg, hsl(217, 33%, 20%), hsl(217, 33%, 25%));
+      padding: 1.5rem;
+      border-radius: 0.75rem;
+      box-shadow: 0 8px 32px hsl(217, 33%, 10%, 0.4);
+      border: 1px solid hsl(217, 20%, 30%);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 40px hsl(45, 93%, 58%, 0.3);
+    }
+
+    .card-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: hsl(45, 93%, 89%);
+      margin-bottom: 1rem;
+    }
+
+    .card-content {
+      color: hsl(45, 93%, 89%);
+      margin-bottom: 1rem;
+    }
+
+    .card-footer {
+      font-size: 0.875rem;
+      color: hsl(45, 30%, 75%);
+    }
+
+    .card-footer p {
+      margin-bottom: 0.25rem;
+    }
+
+    /* Animations */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes scaleIn {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    .animate-fade-in-up {
+      animation: fadeInUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) both;
+    }
+
+    .animate-scale-in {
+      animation: scaleIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+    }
+
+    .delay-200 {
+      animation-delay: 0.2s;
+    }
+
+    .delay-400 {
+      animation-delay: 0.4s;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .container {
+        padding: 1rem;
+      }
+      
+      .main-title {
+        font-size: 1.875rem;
+      }
+      
+      .subtitle {
+        font-size: 1.125rem;
+      }
+      
+      .card {
+        padding: 1rem;
+      }
+    }
+
+    /* Accessibility */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+  </style>
+
   <body>
-    <div id="root"></div>
-    <script type="module" src="./src/main.tsx"></script>
+    <div class="container">
+      <h1 class="main-title animate-fade-in-up">
+        🏁 Scacchiera del Tempo - Landing Page
+      </h1>
+      
+      <p class="subtitle animate-fade-in-up delay-200">
+        ✅ Benvenuti nella tua strategia per una vita da Dio!
+      </p>
+      
+      <div class="card animate-scale-in delay-400">
+        <h2 class="card-title">
+          🚀 Sistema Funzionante
+        </h2>
+        
+        <p class="card-content">
+          Il sito è ora configurato correttamente sia per Lovable che per GitHub Pages.
+        </p>
+        
+        <div class="card-footer">
+          <p>GitHub Pages URL: https://antoca84.github.io/lovable-static-sparkle/</p>
+          <p>Configurazione: Router dinamico per entrambi gli ambienti</p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
